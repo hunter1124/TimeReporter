@@ -6,7 +6,6 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.net.Uri;
@@ -16,14 +15,7 @@ public class TimeReporterUtils {
 		Calendar cal = Calendar.getInstance();
 		int nowHour = cal.get(Calendar.HOUR_OF_DAY);
 		int nowMinute = cal.get(Calendar.MINUTE);
-/*==
-		if (nowMinute < 30) {
-			nowMinute = 30;
-		} else {
-			if (++nowHour >= 24) nowHour = 0;
-			nowMinute = 0;
-		}
-*/
+
 		boolean isTomorrow = false;
 		
 		if (++nowHour >= 24) {

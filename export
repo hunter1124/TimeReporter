@@ -1,0 +1,4 @@
+ant clean
+ant release
+rm ../bin/TimeReporter/*.apk
+cp ./bin/TimeReporter-release.apk ../bin/TimeReporter/TimeReporter.apk

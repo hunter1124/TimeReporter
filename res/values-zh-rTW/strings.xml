@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">整點報時</string>
+    <string name="action_settings">更多設定</string>
+    
+    <string name="recevier_key">tw.com.syscode.time.report</string>
+    
+    <string name="button_text_sunday">日</string>
+    <string name="button_text_monday">一</string>
+    <string name="button_text_tuesday">二</string>
+    <string name="button_text_wednesday">三</string>
+    <string name="button_text_thursday">四</string>
+    <string name="button_text_friday">五</string>
+    <string name="button_text_saturday">六</string>
+    
+    <string name="play_sound">鈴聲</string>
+    <string name="text_speech">報時</string>
+    <string name="stop_speech">暫停報時</string>
+    
+    <string name="set_to_default">建議設定</string>
+    <string name="listen">試聽報時</string>
+    <string name="settings">更多設定</string>
+    
+    <string name="time_desc_00_00">上午 00:00</string>
+    <string name="time_desc_01_00">上午 01:00</string>
+    <string name="time_desc_02_00">上午 02:00</string>
+    <string name="time_desc_03_00">上午 03:00</string>
+    <string name="time_desc_04_00">上午 04:00</string>
+    <string name="time_desc_05_00">上午 05:00</string>
+    <string name="time_desc_06_00">上午 06:00</string>
+    <string name="time_desc_07_00">上午 07:00</string>
+    <string name="time_desc_08_00">上午 08:00</string>
+    <string name="time_desc_09_00">上午 09:00</string>
+    <string name="time_desc_10_00">上午 10:00</string>
+    <string name="time_desc_11_00">上午 11:00</string>
+    <string name="time_desc_12_00">下午 12:00</string>
+    <string name="time_desc_13_00">下午 01:00</string>
+    <string name="time_desc_14_00">下午 02:00</string>
+    <string name="time_desc_15_00">下午 03:00</string>
+    <string name="time_desc_16_00">下午 04:00</string>
+    <string name="time_desc_17_00">下午 05:00</string>
+    <string name="time_desc_18_00">下午 06:00</string>
+    <string name="time_desc_19_00">下午 07:00</string>
+    <string name="time_desc_20_00">下午 08:00</string>
+    <string name="time_desc_21_00">下午 09:00</string>
+    <string name="time_desc_22_00">下午 10:00</string>
+    <string name="time_desc_23_00">下午 11:00</string>
+    
+    <string name="title_activity_settings">整點報時 - 設定</string>
+    <string name="speak_english">播放英語</string>
+	<string name="speak_chinese">播放中文</string>
+</resources>

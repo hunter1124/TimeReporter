@@ -1,0 +1,798 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="#EFF8FB"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/week_area"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+        <Button
+	        android:id="@+id/buttonSunday"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textColor="#CEAFD0"
+	        android:background="@drawable/week_button"
+	        android:text="@string/button_text_sunday"
+	        android:tag="1"
+	        android:onClick="onButtonWeekClicked" />
+    
+        <Button
+	        android:id="@+id/buttonMonday"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/week_button"
+	        android:text="@string/button_text_monday"
+	        android:tag="2"
+	        android:onClick="onButtonWeekClicked" />
+        
+        <Button
+	        android:id="@+id/buttonTuesday"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/week_button"
+	        android:text="@string/button_text_tuesday"
+	        android:tag="3"
+	        android:onClick="onButtonWeekClicked" />
+        
+        <Button
+	        android:id="@+id/buttonWednesday"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/week_button"
+	        android:text="@string/button_text_wednesday"
+	        android:tag="4"
+	        android:onClick="onButtonWeekClicked" />
+        
+        <Button
+	        android:id="@+id/buttonThursday"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/week_button"
+	        android:text="@string/button_text_thursday"
+	        android:tag="5"
+	        android:onClick="onButtonWeekClicked" />
+        
+        <Button
+	        android:id="@+id/buttonFriday"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/week_button"
+	        android:text="@string/button_text_friday"
+	        android:tag="6"
+	        android:onClick="onButtonWeekClicked" />
+        
+        <Button
+	        android:id="@+id/buttonStaurdat"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/week_button"
+	        android:text="@string/button_text_saturday"
+	        android:tag="7"
+	        android:onClick="onButtonWeekClicked" />
+    </LinearLayout>
+    
+	<TextView
+        android:id="@+id/textViewToday"
+        android:layout_below="@+id/week_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp"
+        android:background="#D8F781"
+        android:textColor="#0B3861" />
+	
+	<CheckBox
+        android:id="@+id/checkBoxStopSpeech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/textViewToday"
+        android:layout_below="@+id/week_area"
+        android:text="@string/stop_speech"
+        android:textSize="20sp"
+        android:textColor="#61380B"
+        android:onClick="onCheckboxStopSpeechClicked" />
+    
+    <ScrollView
+        android:id="@+id/time_area"
+        android:layout_above="@+id/tools_area"
+	    android:layout_below="@+id/textViewToday"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="1dip"
+	    android:background="#606060" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF8A"
+            android:stretchColumns="0,1,2" >
+
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox00_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_00_00"
+	                android:tag="0"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox00_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="0"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox00_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="0"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox01_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:tag="1"
+	                android:text="@string/time_desc_01_00"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox01_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="1"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox01_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="1"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox02_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_02_00"
+	                android:tag="2"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox02_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="2"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox02_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="2"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox03_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_03_00"
+	                android:tag="3"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox03_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="3"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox03_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="3"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox04_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_04_00"
+	                android:tag="4"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox04_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="4"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox04_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="4"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox05_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_05_00"
+	                android:tag="5"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox05_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="5"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox05_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="5"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox06_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_06_00"
+	                android:tag="6"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox06_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="6"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox06_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="6"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox07_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_07_00"
+	                android:tag="7"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox07_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="7"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox07_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="7"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox08_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_08_00"
+	                android:tag="8"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox08_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="8"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox08_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="8"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox09_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_09_00"
+	                android:tag="9"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox09_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="9"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox09_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="9"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox10_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_10_00"
+	                android:tag="10"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox10_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="10"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox10_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="10"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox11_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_11_00"
+	                android:tag="11"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox11_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="11"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox11_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="11"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox12_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_12_00"
+	                android:tag="12"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox12_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="12"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox12_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="12"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox13_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_13_00"
+	                android:tag="13"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox13_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="13"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox13_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="13"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox14_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_14_00"
+	                android:tag="14"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox14_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="14"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox14_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="14"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox15_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_15_00"
+	                android:tag="15"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox15_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="15"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox15_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="15"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox16_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_16_00"
+	                android:tag="16"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox16_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="16"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox16_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="16"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox17_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_17_00"
+	                android:tag="17"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox17_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="17"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox17_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="17"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox18_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_18_00"
+	                android:tag="18"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox18_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="18"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox18_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="18"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox19_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_19_00"
+	                android:tag="19"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox19_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="19"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox19_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="19"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox20_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_20_00"
+	                android:tag="20"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox20_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="20"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox20_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="20"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox21_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_21_00"
+	                android:tag="21"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox21_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="21"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox21_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="21"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow android:background="#FFEE00">
+	            <CheckBox
+	                android:id="@+id/checkBox22_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_22_00"
+	                android:tag="22"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox22_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="22"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox22_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="22"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+	        
+	        <TableRow>
+	            <CheckBox
+	                android:id="@+id/checkBox23_00_enabled"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content" 
+	                android:text="@string/time_desc_23_00"
+	                android:tag="23"
+	                android:onClick="onCheckboxTimeClicked" />
+
+	             <CheckBox
+	                android:id="@+id/checkBox23_00_sound"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/play_sound"
+	                android:tag="23"
+	                android:onClick="onCheckboxSoundClicked" />
+	             
+	             <CheckBox
+	                android:id="@+id/checkBox23_00_tts"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/text_speech"
+	                android:tag="23"
+	                android:onClick="onCheckboxSpeechClicked" />
+	        </TableRow>
+    	</TableLayout>
+    </ScrollView>
+    
+    <LinearLayout
+        android:id="@+id/tools_area"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_alignParentBottom="true">
+        <Button
+	        android:id="@+id/buttonDefault"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/set_to_default"
+	        android:background="@drawable/default_value_button"
+	        android:textColor="#FFFFFF"
+	        android:onClick="onButtonDefaultClicked" />
+    
+        <Button
+	        android:id="@+id/buttonPlay"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/listen"
+	        android:background="@drawable/listen_button"
+	        android:textColor="#FFFFFF"
+	        android:onClick="onButtonListenClicked" />
+        
+        <Button
+	        android:id="@+id/buttonSettings"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/settings"
+	        android:background="@drawable/settings_button"
+	        android:textColor="#FFFFFF"
+	        android:onClick="onButtonSettingsClicked" />
+    </LinearLayout>
+
+</RelativeLayout>

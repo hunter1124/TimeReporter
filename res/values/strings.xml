@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Time Reporter</string>
+    <string name="action_settings">Settings</string>
+    <string name="recevier_key">tw.com.syscode.time.report</string>
+    <string name="button_text_sunday">SU</string>
+    <string name="button_text_monday">MO</string>
+    <string name="button_text_tuesday">TU</string>
+    <string name="button_text_wednesday">WE</string>
+    <string name="button_text_thursday">TH</string>
+    <string name="button_text_friday">FR</string>
+    <string name="button_text_saturday">SA</string>
+    <string name="play_sound">sound</string>
+    <string name="text_speech">speech</string>
+    <string name="stop_speech">pause</string>
+    <string name="set_to_default">Default</string>
+    <string name="listen">Listen</string>
+    <string name="settings">Time Reporter - Settings</string>
+    <string name="time_desc_00_00">AM 00:00</string>
+    <string name="time_desc_01_00">AM 01:00</string>
+    <string name="time_desc_02_00">AM 02:00</string>
+    <string name="time_desc_03_00">AM 03:00</string>
+    <string name="time_desc_04_00">AM 04:00</string>
+    <string name="time_desc_05_00">AM 05:00</string>
+    <string name="time_desc_06_00">AM 06:00</string>
+    <string name="time_desc_07_00">AM 07:00</string>
+    <string name="time_desc_08_00">AM 08:00</string>
+    <string name="time_desc_09_00">AM 09:00</string>
+    <string name="time_desc_10_00">AM 10:00</string>
+    <string name="time_desc_11_00">AM 11:00</string>
+    <string name="time_desc_12_00">PM 12:00</string>
+    <string name="time_desc_13_00">PM 01:00</string>
+    <string name="time_desc_14_00">PM 02:00</string>
+    <string name="time_desc_15_00">PM 03:00</string>
+    <string name="time_desc_16_00">PM 04:00</string>
+    <string name="time_desc_17_00">PM 05:00</string>
+    <string name="time_desc_18_00">PM 06:00</string>
+    <string name="time_desc_19_00">PM 07:00</string>
+    <string name="time_desc_20_00">PM 08:00</string>
+    <string name="time_desc_21_00">PM 09:00</string>
+    <string name="time_desc_22_00">PM 10:00</string>
+    <string name="time_desc_23_00">PM 11:00</string>
+    
+    <string name="title_activity_settings">Settings</string>
+	<string name="speak_english">Speak English</string>
+	<string name="speak_chinese">Speak Chinese</string>
+</resources>

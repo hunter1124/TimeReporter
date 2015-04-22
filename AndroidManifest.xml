@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tw.com.syscode.timereporter"
+    android:installLocation="auto"
+    android:versionCode="6"
+    android:versionName="1.1.4" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <permission
+        android:name="tw.com.syscode.permission.TIME_REPORTER"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="tw.com.syscode.permission.TIME_REPORTER" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:installLocation="internalOnly"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".TimeReceiver"
+            android:permission="tw.com.syscode.permission.TIME_REPORTER" >
+            <intent-filter>
+                <action android:name="tw.com.syscode.time.report" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".RebootReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data
+                    android:path="tw.com.syscode.timereporter"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".TTS"
+            android:exported="false"
+            android:label="@string/app_name" >
+        </service>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_settings" >
+        </activity>
+    </application>
+
+</manifest>
